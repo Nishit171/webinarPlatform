@@ -6,7 +6,7 @@ function Header({ showAnnouncement = true, showCreateButton = true, showLogo = t
   return (
     <header className="w-full">
       {showAnnouncement && (
-        <div className="relative flex items-center justify-center bg-primary px-4 py-2 text-sm text-white">
+        <div className="relative flex items-center justify-center bg-primary px-4 py-2 text-sm text-black">
           <span className="flex items-center gap-1">
             <span>✦ New webinar releasing on 23 April 2025.</span>
             <Link to="#" className="underline">
@@ -21,7 +21,7 @@ function Header({ showAnnouncement = true, showCreateButton = true, showLogo = t
       <div className="flex items-center justify-between px-4 py-4">
         {showLogo && <Logo showText={showLogoText} />}
         {showCreateButton && (
-          <Link to="/create" className="inline-flex items-center gap-1 rounded-md bg-primary px-4 py-2 text-white">
+          <Link to="/create" className="inline-flex items-center gap-1 rounded-md bg-primary px-4 py-2 text-black">
             <span className="text-lg font-medium">+</span> Create webinar
           </Link>
         )}
