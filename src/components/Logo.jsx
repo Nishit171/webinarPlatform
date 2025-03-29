@@ -4,7 +4,7 @@ function Logo({ showText = false }) {
   return (
     <Link to="/" className="flex items-center gap-2">
       <div className="h-8 w-8 rounded bg-primary"></div>
-      {showText && <span className="text-lg font-medium">Financewithsharan</span>}
+      {showText && <span className="text-lg font-medium">go back</span>}
     </Link>
   )
 }
