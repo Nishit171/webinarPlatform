@@ -1,6 +1,10 @@
-import StarRating from "./StarRating"
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import StarRating from "./StarRating";
 
 function WebinarCard({ title, description, enrolledCount, price, rating }) {
+  const navigate = useNavigate();
+
   return (
     <div className="flex gap-4 border-b py-6">
       <div className="h-16 w-16 overflow-hidden rounded-md bg-blue-100">
@@ -17,12 +21,19 @@ function WebinarCard({ title, description, enrolledCount, price, rating }) {
         <p className="text-sm text-muted-foreground">{description}</p>
         <div className="mt-auto flex items-center justify-between">
           <span className="text-sm text-muted-foreground">{enrolledCount} people have enrolled till now</span>
-          <span className="font-medium">Price: ${price}</span>
+          <div className="flex items-center">
+            <span className="font-medium">Price: ${price}</span>
+            <button
+              onClick={() => navigate("/analytics")}
+              className="ml-4 rounded bg-blue-500 px-3 py-1 text-white hover:bg-blue-600"
+            >
+              View Analytics
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default WebinarCard
-
+export default WebinarCard;

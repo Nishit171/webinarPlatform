@@ -181,5 +181,5 @@ function AnalyticsPage() {
   )
 }
 
-export default AnalyticsPage
+export default AnalyticsPage;
 
